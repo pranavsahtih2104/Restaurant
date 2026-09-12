@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-olive-deep: #19261A;
+    --color-olive-dark: #233825;
+    --color-parchment: #F8F5EE;
+    --color-terracotta: #C4573B;
+    --color-espresso: #1C1513;
+  }
+
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F8F5EE;
+    color: #1C1513;
+    overflow-x: hidden;
+  }
+
+  /* Custom minimal luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8F5EE;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #233825;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C4573B;
+  }
+}
+
+@layer utilities {
+  .vertical-lr {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+  }
+  
+  .vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Subtle film grain effect */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Smooth reveal transitions */
+.reveal-scale {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.9s ease;
+}
+
+.reveal-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Editorial line decorations */
+.editorial-hr {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(28, 21, 19, 0.05) 0%, rgba(28, 21, 19, 0.3) 50%, rgba(28, 21, 19, 0.05) 100%);
+}
+
+.editorial-hr-light {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(248, 245, 238, 0.05) 0%, rgba(248, 245, 238, 0.25) 50%, rgba(248, 245, 238, 0.05) 100%);
+}
+
+/* Custom modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
