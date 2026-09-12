@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDownRight, UtensilsCrossed, Sparkles } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface HeroProps {
   onOpenReservation: () => void;
@@ -97,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation, onOpenMenu }) => 
           <div className="lg:col-span-6 relative">
             <div className="relative group overflow-hidden border border-espresso-900/15 shadow-2xl bg-espresso-950">
               <img
-                src="/images/hero-editorial.jpg"
+                src={getAssetUrl('images/hero-editorial.jpg')}
                 alt="Oliva candlelit evening dining setting with handmade pasta and Italian wine"
                 className="w-full h-[420px] sm:h-[520px] md:h-[620px] object-cover object-center filter brightness-[0.95] contrast-[1.05] group-hover:scale-105 transition-transform duration-1000 ease-out"
               />

@@ -1,4 +1,5 @@
 import type { MenuItem } from '../types';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const MENU_ITEMS: MenuItem[] = [
   // ANTIPASTI
@@ -11,7 +12,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 650,
     tags: ['Vegetarian', "Chef's Pick"],
     pairing: 'Greco di Tufo 2022',
-    image: '/images/dish-burrata.jpg',
+    image: getAssetUrl('images/dish-burrata.jpg'),
     highlight: true,
   },
   {
@@ -54,7 +55,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 980,
     tags: ['Signature', 'Vegetarian'],
     pairing: 'Barolo DOCG 2019',
-    image: '/images/signature-tartufo.jpg',
+    image: getAssetUrl('images/signature-tartufo.jpg'),
     highlight: true,
   },
   {
@@ -76,7 +77,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 890,
     tags: ["Chef's Pick"],
     pairing: 'Nebbiolo d’Alba',
-    image: '/images/pasta-prep.jpg',
+    image: getAssetUrl('images/pasta-prep.jpg'),
   },
   {
     id: 'pasta-4',
@@ -99,7 +100,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 1250,
     tags: ['Signature', 'Gluten-Free'],
     pairing: 'Etna Bianco DOC',
-    image: '/images/dish-branzino.jpg',
+    image: getAssetUrl('images/dish-branzino.jpg'),
     highlight: true,
   },
   {
@@ -133,7 +134,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 520,
     tags: ['Signature', 'Vegetarian'],
     pairing: 'Passito di Pantelleria',
-    image: '/images/dish-tiramisu.jpg',
+    image: getAssetUrl('images/dish-tiramisu.jpg'),
     highlight: true,
   },
   {
@@ -167,7 +168,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 680,
     tags: ['Signature'],
     pairing: 'Aperitivo Hour',
-    image: '/images/dish-cocktail.jpg',
+    image: getAssetUrl('images/dish-cocktail.jpg'),
     highlight: true,
   },
   {

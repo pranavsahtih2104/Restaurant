@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/Button';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface KitchenCraftProps {
   onOpenReservation: () => void;
@@ -59,7 +60,7 @@ export const KitchenCraft: React.FC<KitchenCraftProps> = ({ onOpenReservation })
               {/* Chef Luca Main Portrait */}
               <div className="col-span-7 overflow-hidden border border-espresso-900/15 shadow-xl bg-espresso-950">
                 <img
-                  src="/images/chef-luca.jpg"
+                  src={getAssetUrl('images/chef-luca.jpg')}
                   alt="Chef Luca Moretti plating pasta at Oliva"
                   className="w-full h-[380px] sm:h-[460px] object-cover object-top hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -77,7 +78,7 @@ export const KitchenCraft: React.FC<KitchenCraftProps> = ({ onOpenReservation })
               <div className="col-span-5 flex flex-col justify-between space-y-4">
                 <div className="overflow-hidden border border-espresso-900/15 shadow-md bg-espresso-950 h-full">
                   <img
-                    src="/images/pasta-prep.jpg"
+                    src={getAssetUrl('images/pasta-prep.jpg')}
                     alt="Daily fresh handmade pasta preparation"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
                   />

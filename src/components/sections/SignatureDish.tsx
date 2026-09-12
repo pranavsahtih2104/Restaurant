@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface SignatureDishProps {
   onOpenReservation: () => void;
@@ -16,7 +17,7 @@ export const SignatureDish: React.FC<SignatureDishProps> = ({
       {/* Background Full-Width Photographic Canvas */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/signature-tartufo.jpg"
+          src={getAssetUrl('images/signature-tartufo.jpg')}
           alt="Signature Tagliatelle al Tartufo with black truffles"
           className="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1] scale-105 hover:scale-100 transition-transform duration-1000 ease-out"
         />

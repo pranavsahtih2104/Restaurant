@@ -1,4 +1,5 @@
 import type { EventItem } from '../types';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const UPCOMING_EVENTS: EventItem[] = [
   {
@@ -19,7 +20,7 @@ export const UPCOMING_EVENTS: EventItem[] = [
     ],
     price: 3800,
     seatsLeft: 6,
-    image: '/images/event-wine.jpg',
+    image: getAssetUrl('images/event-wine.jpg'),
   },
   {
     id: 'event-2',
@@ -37,7 +38,7 @@ export const UPCOMING_EVENTS: EventItem[] = [
     ],
     price: 6200,
     seatsLeft: 2,
-    image: '/images/chef-luca.jpg',
+    image: getAssetUrl('images/chef-luca.jpg'),
   },
   {
     id: 'event-3',
@@ -55,6 +56,6 @@ export const UPCOMING_EVENTS: EventItem[] = [
     ],
     price: 2400,
     seatsLeft: 12,
-    image: '/images/room-terrace.jpg',
+    image: getAssetUrl('images/room-terrace.jpg'),
   },
 ];

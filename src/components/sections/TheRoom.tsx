@@ -1,6 +1,7 @@
 import React from 'react';
 import { Eye, Sparkles } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface TheRoomProps {
   onOpenLightbox: (index: number) => void;
@@ -35,7 +36,7 @@ export const TheRoom: React.FC<TheRoomProps> = ({ onOpenLightbox, onOpenReservat
             className="group relative cursor-pointer overflow-hidden border border-cream-100/15 shadow-2xl bg-espresso-900"
           >
             <img
-              src="/images/room-dining.jpg"
+              src={getAssetUrl('images/room-dining.jpg')}
               alt="The Dining Room at Oliva"
               className="w-full h-[450px] sm:h-[600px] object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out filter brightness-[0.92]"
             />
@@ -70,7 +71,7 @@ export const TheRoom: React.FC<TheRoomProps> = ({ onOpenLightbox, onOpenReservat
               className="lg:col-span-6 group relative cursor-pointer overflow-hidden border border-cream-100/15 shadow-xl bg-espresso-900"
             >
               <img
-                src="/images/room-bar.jpg"
+                src={getAssetUrl('images/room-bar.jpg')}
                 alt="The Bar & Aperitivo at Oliva"
                 className="w-full h-[400px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
               />
@@ -93,7 +94,7 @@ export const TheRoom: React.FC<TheRoomProps> = ({ onOpenLightbox, onOpenReservat
               className="lg:col-span-6 group relative cursor-pointer overflow-hidden border border-cream-100/15 shadow-xl bg-espresso-900"
             >
               <img
-                src="/images/room-terrace.jpg"
+                src={getAssetUrl('images/room-terrace.jpg')}
                 alt="After Dark Terrace at Oliva"
                 className="w-full h-[400px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
               />

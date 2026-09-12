@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface PhilosophyProps {
   onOpenReservation: () => void;
@@ -71,7 +72,7 @@ export const Philosophy: React.FC<PhilosophyProps> = () => {
               {/* Primary Large Image */}
               <div className="w-full sm:w-10/12 ml-auto overflow-hidden border border-espresso-900/15 shadow-xl bg-espresso-950">
                 <img
-                  src="/images/dish-burrata.jpg"
+                  src={getAssetUrl('images/dish-burrata.jpg')}
                   alt="Fresh Burrata Pugliese with blistered heirloom cherry tomatoes and cold pressed basil oil"
                   className="w-full h-[380px] sm:h-[460px] object-cover object-center hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -84,7 +85,7 @@ export const Philosophy: React.FC<PhilosophyProps> = () => {
               {/* Secondary Overlapping Detail Image */}
               <div className="sm:absolute -bottom-10 -left-6 w-8/12 sm:w-64 mt-6 sm:mt-0 overflow-hidden border-2 border-parchment shadow-2xl bg-espresso-900">
                 <img
-                  src="/images/room-details.jpg"
+                  src={getAssetUrl('images/room-details.jpg')}
                   alt="Candlelit olive oil dish and wine at Oliva"
                   className="w-full h-56 sm:h-72 object-cover object-center hover:scale-105 transition-transform duration-700 ease-out"
                 />

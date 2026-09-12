@@ -4,10 +4,11 @@ import { MENU_ITEMS } from '../../data/menuData';
 import type { MenuCategory } from '../../types';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface MenuSectionProps {
   onOpenFullMenu: () => void;
-  onOpenReservation: () => void;
+  onOpenReservation?: () => void;
 }
 
 export const MenuSection: React.FC<MenuSectionProps> = ({
@@ -159,7 +160,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
           <div className="lg:col-span-5 sticky top-28 hidden lg:block">
             <div className="border border-espresso-900/15 shadow-2xl bg-espresso-950 overflow-hidden relative group">
               <img
-                src={hoveredImage || (currentCategoryItems[0]?.image ?? '/images/signature-tartufo.jpg')}
+                src={hoveredImage || (currentCategoryItems[0]?.image ?? getAssetUrl('images/signature-tartufo.jpg'))}
                 alt="Culinary highlight at Oliva"
                 className="w-full h-[460px] object-cover object-center transition-all duration-700 ease-out filter brightness-95 group-hover:scale-105"
               />

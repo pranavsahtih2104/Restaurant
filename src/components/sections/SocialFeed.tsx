@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, MessageCircle, ExternalLink } from 'lucide-react';
 import { InstagramIcon } from '../ui/Icons';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface SocialFeedProps {
   onOpenLightbox: (index: number) => void;
@@ -10,7 +11,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
   const posts = [
     {
       id: 'p1',
-      image: '/images/signature-tartufo.jpg',
+      image: getAssetUrl('images/signature-tartufo.jpg'),
       likes: '1,420',
       comments: '84',
       caption: 'The art of the 30-yolk ribbon and freshly shaved black truffles. #oliva #tartufo',
@@ -18,7 +19,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
     },
     {
       id: 'p2',
-      image: '/images/dish-cocktail.jpg',
+      image: getAssetUrl('images/dish-cocktail.jpg'),
       likes: '930',
       comments: '42',
       caption: 'Golden hour Negroni Affumicato with rosemary wood smoke. #aperitivo',
@@ -26,7 +27,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
     },
     {
       id: 'p3',
-      image: '/images/room-dining.jpg',
+      image: getAssetUrl('images/room-dining.jpg'),
       likes: '2,180',
       comments: '112',
       caption: 'When evening falls in our olive hall. Ready for dinner service. #olivarestaurant',
@@ -34,7 +35,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
     },
     {
       id: 'p4',
-      image: '/images/pasta-prep.jpg',
+      image: getAssetUrl('images/pasta-prep.jpg'),
       likes: '1,750',
       comments: '95',
       caption: 'Morning flour, golden yolks, and Piedmontese agnolotti. #handmade',
@@ -42,7 +43,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
     },
     {
       id: 'p5',
-      image: '/images/dish-burrata.jpg',
+      image: getAssetUrl('images/dish-burrata.jpg'),
       likes: '1,290',
       comments: '63',
       caption: 'Puglia burrata and heirloom tomatoes picked at peak ripeness. #cucina',
@@ -50,7 +51,7 @@ export const SocialFeed: React.FC<SocialFeedProps> = ({ onOpenLightbox }) => {
     },
     {
       id: 'p6',
-      image: '/images/room-terrace.jpg',
+      image: getAssetUrl('images/room-terrace.jpg'),
       likes: '3,410',
       comments: '204',
       caption: 'Candlelight and jazz under the olive trees. #afterdark',
